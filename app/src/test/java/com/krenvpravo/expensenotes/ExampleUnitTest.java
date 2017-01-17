@@ -1,4 +1,4 @@
-package com.krenvpravo.moneynotes;
+package com.krenvpravo.expensenotes;
 
 import org.junit.Test;
 

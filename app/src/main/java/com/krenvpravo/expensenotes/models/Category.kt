@@ -1,4 +1,4 @@
-package com.krenvpravo.moneynotes.models
+package com.krenvpravo.expensenotes.models
 
 /**
  * @author Dmitry Borodin on 2017-01-17.

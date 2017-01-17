@@ -1,4 +1,4 @@
-package com.krenvpravo.moneynotes;
+package com.krenvpravo.expensenotes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

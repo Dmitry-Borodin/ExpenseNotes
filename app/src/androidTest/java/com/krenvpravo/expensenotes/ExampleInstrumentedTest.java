@@ -1,4 +1,4 @@
-package com.krenvpravo.moneynotes;
+package com.krenvpravo.expensenotes;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,7 +1,7 @@
-package com.krenvpravo.moneynotes.repository
+package com.krenvpravo.expensenotes.repository
 
-import com.krenvpravo.moneynotes.models.Currency
-import com.krenvpravo.moneynotes.models.Transaction
+import com.krenvpravo.expensenotes.models.Currency
+import com.krenvpravo.expensenotes.models.Transaction
 import org.junit.After
 import org.junit.Test
 
