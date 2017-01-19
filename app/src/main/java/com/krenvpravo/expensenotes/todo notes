@@ -1,2 +1,4 @@
 rxjava apply to repository
-fix kotlin plugin
+add orma
+convert all to kotlin (activity etc)
+

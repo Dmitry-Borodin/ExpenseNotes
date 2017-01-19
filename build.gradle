@@ -23,6 +23,9 @@ allprojects {
 ext {
     support_version = "25.1.0"
     conductor_version = "2.0.5"
+    butterknife = "8.4.0"
+    orma = "4.1.0"
+
 }
 
 task clean(type: Delete) {
