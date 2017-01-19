@@ -27,20 +27,24 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile "com.android.support:appcompat-v7:$rootProject.support_version"
+    compile "com.android.support:recyclerview-v7:$rootProject.support_version"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     compile 'io.reactivex.rxjava2:rxjava:2.0.2'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
-    compile 'com.bluelinelabs:conductor:2.0.5'
+    annotationProcessor 'com.github.gfx.android.orma:orma-processor:4.1.0'
+    compile 'com.github.gfx.android.orma:orma:4.1.0'
+
+
+    compile "com.bluelinelabs:conductor:$rootProject.conductor_version"
     // Components that go along with
     // Android's support libraries (currently just a PagerAdapter):
-    compile 'com.bluelinelabs:conductor-support:2.0.5'
+    compile "com.bluelinelabs:conductor-support:$rootProject.conductor_version"
     // RxJava2 lifecycle support:
-    compile 'com.bluelinelabs:conductor-rxlifecycle2:2.0.5'
+    compile "com.bluelinelabs:conductor-rxlifecycle2:$rootProject.conductor_version"
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
