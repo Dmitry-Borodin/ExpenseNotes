@@ -7,6 +7,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 import org.junit.Before
+import java.util.*
 
 /**
  * @author Dmitry Borodin on 2017-01-17.
@@ -31,10 +32,7 @@ class TransactionRepositoryTest {
     @Test
     fun testRepositoryAdd() {
         assertTrue(TransactionRepository.getTransactions().isEmpty())
-        val transaction = Transaction(
-                amoutnWithCents = 10L,
-                currency = Currency(1, "maney", "fullnameMoney"),
-                description = "description")
+        val transaction = getTestTransaction()
         TransactionRepository.saveTransaction(transaction)
 
         assertTrue(TransactionRepository.getTransactions().size == 1)
@@ -43,14 +41,17 @@ class TransactionRepositoryTest {
 
     @Test
     fun testRepositoryClean() {
-        val transaction = Transaction(
-                amoutnWithCents = 10L,
-                currency = Currency(1, "maney", "fullnameMoney"),
-                description = "description")
+        val transaction = getTestTransaction()
         TransactionRepository.saveTransaction(transaction)
         TransactionRepository.cleanTransactions()
         assertTrue(TransactionRepository.getTransactions().isEmpty())
+    }
 
+    private fun getTestTransaction(): Transaction {
+        return Transaction(
+                amoutnWithCents = 10L,
+                currency = Currency(1, "maney", "fullnameMoney"),
+                description = "description", addingDate = Date())
     }
 
 }
